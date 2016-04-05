@@ -1,5 +1,5 @@
 module Flip
-  class FeaturesController < ApplicationController
+  class FeaturesController < Flip.parent_controller.constantize
 
     def index
       @p = FeaturesPresenter.new(FeatureSet.instance)

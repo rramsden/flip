@@ -1,5 +1,5 @@
 module Flip
-  class StrategiesController < ApplicationController
+  class StrategiesController < Flip.parent_controller.constantize
 
     include Flip::Engine.routes.url_helpers
 

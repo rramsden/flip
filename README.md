@@ -158,6 +158,14 @@ end
 mount Flip::Engine => "/admin/features"
 ```
 
+Note, if you don't want the Flip dashboard controllers to inherit from
+ApplicationController you can specify a custom parent controller to inherit from:
+
+```ruby
+# config/initializers/flip.rb
+Flip.parent_controller = 'Admin::BaseController'
+```
+
 Cacheable
 ---------
 

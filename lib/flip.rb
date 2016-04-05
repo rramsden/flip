@@ -4,6 +4,7 @@
   inflector
   core_ext/hash/reverse_merge
   core_ext/object/blank
+  core_ext/module/attribute_accessors
 }.each { |name| require "active_support/#{name}" }
 
 # Flip files.
@@ -25,4 +26,7 @@ require "flip/engine" if defined?(Rails)
 
 module Flip
   extend Facade
+
+  mattr_accessor :parent_controller
+  self.parent_controller = "ApplicationController"
 end
